@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Condiçoes .JS</title>
+    <style>
+        * {
+            margin: 0%;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            font-size: 28pt;
+        }
+        
+        h1 {
+            margin-bottom: 30px;
+            box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.438);
+            padding: 25px;
+            text-align: center;
+        }
+        
+        section {
+            border: 1px solid black;
+            
+        }
+    </style>
+</head>
+<body>
+    <h1>Condiçoes Simples</h1>
+    <section>
+        Velocidade do carro: <input type="number" name="txtvel" id="txtvel"> Km/h
+        
+        <input type="button" value="verificar" onclick="calcular()">
+        
+        <div id="res">
+        </div>
+    </section>
+    
+    <script>
+        function calcular() {        
+            var txtv = window.document.querySelector('input#txtvel')
+            
+            var res = window.document.querySelector('div#res')
+            
+            var vel = Number(txtv.value)
+           
+            res.innerHTML = `<p>Sua velociade atual é de <strong>${vel}Km/h</strong></p>`
+            
+            if (vel > 60) {
+                res.innerHTML += `<p>Você está <strong>Multado</strong> por excesso de <strong>Velocidade</strong></p>` 
+            }
+            
+            res.innerHTML += `<p>Dirija sempre com cinto de segurança</p>`
+        }    
+        </script>
+</body>
+</html>
