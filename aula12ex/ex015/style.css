@@ -26,4 +26,5 @@ footer {
     color: white;
     text-align: center;
     font-style: italic;
+    text-shadow: 2px 1.2px 2px rgba(0, 0, 0, 0.502);
 }
